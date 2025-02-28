@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Maisha Mir",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "expresss": "^0.0.0",
+    "uuid": "^11.1.0"
+  }
+}
