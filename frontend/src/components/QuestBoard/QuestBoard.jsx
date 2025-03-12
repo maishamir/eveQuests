@@ -12,7 +12,9 @@ function QuestBoard() {
     })
     setTasks(completedTask)
   }
-  // TODO: pass function as prop to each component
+
+  // TODO: create function that deletes correct task
+  
 
 
   // TODO: use useState to store tasks
