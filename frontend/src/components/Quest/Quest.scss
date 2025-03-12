@@ -10,6 +10,7 @@
   border-radius: 0.5rem;
   align-items: center;
   border: 2px solid $hearthEmberTwo;
+  position: relative;
 
   &__whimsify {
     padding: 0.5rem 0.75rem;
@@ -17,6 +18,8 @@
     border-radius: 0.5rem;
     background: $mysticOrchid;
     cursor: pointer;
+    position: absolute;
+    right: 3rem;
   }
   // margin: 0 auto;
 }

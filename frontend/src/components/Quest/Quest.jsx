@@ -6,6 +6,7 @@ function Quest({ task, priority }) {
     <div className="quest">
       <p className="quest__task">{task}</p>
       <button className="quest__whimsify">whim</button>
+      <input type="checkbox"  />
     </div>
   );
 }

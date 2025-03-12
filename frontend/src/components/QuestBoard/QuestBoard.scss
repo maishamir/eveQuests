@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2.5rem;
   overflow: scroll;
 
 
@@ -35,14 +35,15 @@
     background: $timewornScroll;
     padding: 0.75rem;
     border-radius: 0.75rem;
+    position: relative;
   }
 
   &__addTask {
-    width: 55%;
+    width: 75%;
     display: flex;
     justify-content: space-evenly;
     input {
-      padding: 0.75rem 0.5rem;
+      padding: 1rem 0.75rem;
       width: 80%;
       border-radius: 0.5rem;
       border: none;
