@@ -14,7 +14,12 @@ function QuestBoard() {
   }
 
   // TODO: create function that deletes correct task
-  
+  function deleteTask(questId) {
+    // TODO: create a copy of the task array WITHOUT the selected task with questId
+    let remainingTasks = tasks.filter(task => task.questId !== questId)
+    setTasks(remainingTasks)
+    
+  }
 
 
   // TODO: use useState to store tasks
@@ -39,18 +44,25 @@ function QuestBoard() {
   // TODO: update the state when adding a task
   function addTask(e) {
     e.preventDefault();
-    setTasks([...tasks, e.target.task.value]);
+    setTasks([...tasks, { task: e.target.task.value, isChecked: false, questId: uuidv4() }] );
   }
 
   return (
     <div className="questBoard__container">
       <div className="questBoard">
         <div className="questBoard__quests">
-          {tasks.map((task) => {
+          {/* {tasks.length > 0 && tasks.map((task) => {
             return (
-              <Quest task={task.task} key={task.questId} checkTask={completeTask} questId={task.questId} isChecked={task.isChecked} />
+              <Quest task={task.task} key={task.questId} checkTask={completeTask} deleteTask={deleteTask} questId={task.questId} isChecked={task.isChecked} />
             );
-          })}
+          })} */}
+
+          {
+            tasks.length > 0 ? tasks.map((task => {
+              return <Quest task={task.task} key={task.questId} checkTask={completeTask} deleteTask={deleteTask} questId={task.questId} isChecked={task.isChecked} />
+            })) : <h1>You've completed all your quests today!</h1>
+          }
+          
         </div>
 
         <form className="questBoard__addTask" onSubmit={addTask}>
