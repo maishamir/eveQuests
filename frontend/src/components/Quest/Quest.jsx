@@ -1,7 +1,7 @@
 import React from "react";
 import "./Quest.scss";
 
-function Quest({ task, priority, checkTask, deleteTask, questId, isChecked }) {
+function Quest({ task, priority, checkTask, deleteTask, questId, isChecked, whimsifyTask }) {
   // TODO: add checkbox and set 'checked' state from prop
   // TODO: on click, call function from QuestBoard and update state
 
@@ -11,7 +11,7 @@ function Quest({ task, priority, checkTask, deleteTask, questId, isChecked }) {
         {task}
       </p>
       <div className="quest__buttons">
-        <button className="quest__buttons--whimsify">whim</button>
+        <button className="quest__buttons--whimsify" onClick={() => whimsifyTask(questId)}>whim</button>
         <button className="quest__buttons--delete" onClick={() => deleteTask(questId)}>X</button>
         <input type="checkbox" className="quest__buttons--complete" checked={isChecked} onClick={() => checkTask(questId)} />
       </div>
